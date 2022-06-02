@@ -18,6 +18,7 @@ const protect = require('./middleware/authMiddleware');
 
 const app = express();
 
+console.log({ MONGO_USER, MONGO_PASSWORD });
 const mongoURL = `mongodb://${MONGO_USER}:${MONGO_PASSWORD}@${MONGO_IP}:${MONGO_PORT}/?authSource=admin`;
 
 const connectWithRetry = () => {
